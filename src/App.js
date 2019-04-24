@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import UserInput from './components/UserInput'
 import ConnectedUsers from './components/Users'
+import { connect } from 'react-redux'
 
 class App extends Component {
   render() {
@@ -12,5 +13,9 @@ class App extends Component {
     );
   }
 }
+const mapStateToProps = (state) => { 
+  return {users: state.users}
+}
 
-export default App;
+export default connect(mapStateToProps)(App);
+
