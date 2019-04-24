@@ -22,7 +22,7 @@ class Users extends Component {
 const mapStateToProps = (state) => {
   return {
     users: state.users,
-    numberOfUsers: state.users.length
+    userCount: state.users.length
   };
 }
 
